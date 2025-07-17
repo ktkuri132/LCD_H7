@@ -63,6 +63,9 @@ file(GLOB_RECURSE lvgl_Source
         Drivers/lvgl/src/libs/*.c
         Drivers/lvgl/src/drivers/*.c
         Drivers/lvgl/examples/porting/*.c
+
+        Drivers/lvgl/guider/custom/*.c
+        Drivers/lvgl/guider/generated/*.c
 )
 
 #target_sources(${CMAKE_PROJECT_NAME} PRIVATE lvgl_Source)
@@ -72,8 +75,8 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
         Src/hw/LCD/st7789.c
         Src/hw/LCD/lcd_fonts.c
-        Src/mw/display/display.c
-        Src/mw/display/display_extlib.c
+#        Src/mw/display/display.c
+#        Src/mw/display/display_extlib.c
         ${lvgl_Source}
 )
 
@@ -83,6 +86,10 @@ target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
     ${CMAKE_SOURCE_DIR}/Drivers/lvgl
     ${CMAKE_SOURCE_DIR}/Drivers/lvgl/src
     ${CMAKE_SOURCE_DIR}/Drivers/lvgl/examples/porting
+
+    ${CMAKE_SOURCE_DIR}/Drivers/lvgl/guider/custom
+    ${CMAKE_SOURCE_DIR}/Drivers/lvgl/guider/generated
+
 )
 
 add_link_options(--diag_suppress=188,546,68,111)

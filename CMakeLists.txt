@@ -39,23 +39,53 @@ add_executable(${CMAKE_PROJECT_NAME})
 
 # Add STM32CubeMX generated sources
 add_subdirectory(cmake/stm32cubemx)
-
+#add_subdirectory(Drivers/lvgl)
 # Link directories setup
 target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined library search paths
 )
+
+file(GLOB_RECURSE lvgl_Source
+        Drivers/lvgl/*.c
+        Drivers/lvgl/src/core/*.c
+        Drivers/lvgl/src/display/*.c
+        Drivers/lvgl/src/draw/*.c
+        Drivers/lvgl/src/indev/*.c
+        Drivers/lvgl/src/widgets/*.c
+        Drivers/lvgl/src/font/*.c
+        Drivers/lvgl/src/layouts/*.c
+        Drivers/lvgl/src/misc/*.c
+        Drivers/lvgl/src/osal/*.c
+        Drivers/lvgl/src/stdlib/*.c
+        Drivers/lvgl/src/tick/*.c
+        Drivers/lvgl/src/others/*.c
+        Drivers/lvgl/src/themes/*.c
+        Drivers/lvgl/src/libs/*.c
+        Drivers/lvgl/src/drivers/*.c
+        Drivers/lvgl/examples/porting/*.c
+)
+
+#target_sources(${CMAKE_PROJECT_NAME} PRIVATE lvgl_Source)
 
 # Add sources to executable
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
         Src/hw/LCD/st7789.c
         Src/hw/LCD/lcd_fonts.c
+        Src/mw/display/display.c
+        Src/mw/display/display_extlib.c
+        ${lvgl_Source}
 )
 
 # Add include paths
-target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
+target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
     # Add user defined include paths
+    ${CMAKE_SOURCE_DIR}/Drivers/lvgl
+    ${CMAKE_SOURCE_DIR}/Drivers/lvgl/src
+    ${CMAKE_SOURCE_DIR}/Drivers/lvgl/examples/porting
 )
+
+add_link_options(--diag_suppress=188,546,68,111)
 
 # Add project symbols (macros)
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE

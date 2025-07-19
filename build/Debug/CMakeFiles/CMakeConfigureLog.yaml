@@ -4,9 +4,462 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Program Files (x86)/cmake-4.0.1-windows-x86_64/share/cmake-4.0/Modules/CMakeDetermineSystem.cmake:200 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:200 (message)"
       - "CMakeLists.txt:31 (project)"
     message: |
       The target system is: Generic -  - arm
-      The host system is: Windows - 10.0.26100 - AMD64
+      The host system is: Linux - 6.14.0-63.fc42.x86_64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc 
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections
+      Id flags:  
+      
+      The output was:
+      1
+      /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(lib_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x16): undefined reference to `_exit'
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc 
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /home/ktkuri/Code/LCD_H7/build/Debug/CMakeFiles/3.31.6/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++ 
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics
+      Id flags:  
+      
+      The output was:
+      1
+      /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(lib_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x16): undefined reference to `_exit'
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++ 
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/ktkuri/Code/LCD_H7/build/Debug/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:31 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/ktkuri/Code/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-XgxYcp"
+      binary: "/home/ktkuri/Code/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-XgxYcp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections"
+      CMAKE_C_FLAGS_DEBUG: "-O0 -g3"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ktkuri/Code/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-XgxYcp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e06e0/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e06e0.dir/build.make CMakeFiles/cmTC_e06e0.dir/build
+        gmake[1]: Entering directory '/home/ktkuri/Code/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-XgxYcp'
+        Building C object CMakeFiles/cmTC_e06e0.dir/CMakeCCompilerABI.c.obj
+        /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections  -std=gnu11   -v -o CMakeFiles/cmTC_e06e0.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc
+        Target: arm-none-eabi
+        Configured with: /mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/src/gcc/configure --target=arm-none-eabi --prefix=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native --libexecdir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/lib --infodir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/info --mandir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/man --htmldir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/html --pdfdir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/pdf --enable-languages=c,c++ --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-arm-none-eabi --with-sysroot=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/arm-none-eabi --build=x86_64-linux-gnu --host=x86_64-linux-gnu --with-gmp=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-mpfr=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-mpc=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-isl=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-libelf=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-pkgversion='GNU Arm Embedded Toolchain 10.3-2021.10' --with-multilib-list=rmprofile,aprofile
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) 
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_e06e0.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp'
+         /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1 -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/ -isysroot /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mfpu=fpv5-d16 -mfloat-abi=hard -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -auxbase-strip CMakeFiles/cmTC_e06e0.dir/CMakeCCompilerABI.c.obj -Wall -Wextra -Wpedantic -std=gnu11 -version -fdata-sections -ffunction-sections -o /tmp/ccWfspqh.s
+        GNU C11 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)
+        	compiled by GNU C version 4.8.4, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/include"
+        ignoring nonexistent directory "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/usr/local/include"
+        ignoring duplicate directory "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/include-fixed"
+        ignoring duplicate directory "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"
+        ignoring nonexistent directory "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include
+         /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include-fixed
+         /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include
+        End of search list.
+        GNU C11 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)
+        	compiled by GNU C version 4.8.4, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: ada28fdd13bdd399f195284d34df0081
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_e06e0.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp'
+         /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m -mfloat-abi=hard -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_e06e0.dir/CMakeCCompilerABI.c.obj /tmp/ccWfspqh.s
+        GNU assembler version 2.36.1 (arm-none-eabi) using BFD version (GNU Arm Embedded Toolchain 10.3-2021.10) 2.36.1.20210621
+        COMPILER_PATH=/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v7e-m+dp/hard/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_e06e0.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp'
+        Linking C static library libcmTC_e06e0.a
+        /usr/bin/cmake -P CMakeFiles/cmTC_e06e0.dir/cmake_clean_target.cmake
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e06e0.dir/link.txt --verbose=1
+        /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ar qc libcmTC_e06e0.a CMakeFiles/cmTC_e06e0.dir/CMakeCCompilerABI.c.obj
+        /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ranlib libcmTC_e06e0.a
+        gmake[1]: Leaving directory '/home/ktkuri/Code/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-XgxYcp'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include]
+          add: [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include-fixed]
+          add: [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include]
+        end of search list found
+        collapse include dir [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include] ==> [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include]
+        collapse include dir [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include-fixed] ==> [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed]
+        collapse include dir [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include] ==> [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include]
+        implicit include dirs: [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include;/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed;/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(arm-none-eabi-g\\+\\+|;ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(arm-none-eabi-g\\+\\+|;ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/ktkuri/Code/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-XgxYcp']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e06e0/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_e06e0.dir/build.make CMakeFiles/cmTC_e06e0.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/ktkuri/Code/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-XgxYcp']
+        ignore line: [Building C object CMakeFiles/cmTC_e06e0.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections  -std=gnu11   -v -o CMakeFiles/cmTC_e06e0.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: /mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/src/gcc/configure --target=arm-none-eabi --prefix=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native --libexecdir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/lib --infodir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/info --mandir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/man --htmldir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/html --pdfdir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/pdf --enable-languages=c,c++ --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-arm-none-eabi --with-sysroot=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/arm-none-eabi --build=x86_64-linux-gnu --host=x86_64-linux-gnu --with-gmp=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-mpfr=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-mpc=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-isl=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-libelf=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-pkgversion='GNU Arm Embedded Toolchain 10.3-2021.10' --with-multilib-list=rmprofile,aprofile]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_e06e0.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp']
+        ignore line: [ /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1 -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/ -isysroot /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mfpu=fpv5-d16 -mfloat-abi=hard -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -auxbase-strip CMakeFiles/cmTC_e06e0.dir/CMakeCCompilerABI.c.obj -Wall -Wextra -Wpedantic -std=gnu11 -version -fdata-sections -ffunction-sections -o /tmp/ccWfspqh.s]
+        ignore line: [GNU C11 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 4.8.4  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/include"]
+        ignore line: [ignoring nonexistent directory "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/include-fixed"]
+        ignore line: [ignoring duplicate directory "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"]
+        ignore line: [ignoring nonexistent directory "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/usr/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include]
+        ignore line: [ /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include-fixed]
+        ignore line: [ /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C11 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 4.8.4  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: ada28fdd13bdd399f195284d34df0081]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_e06e0.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp']
+        ignore line: [ /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m -mfloat-abi=hard -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_e06e0.dir/CMakeCCompilerABI.c.obj /tmp/ccWfspqh.s]
+        ignore line: [GNU assembler version 2.36.1 (arm-none-eabi) using BFD version (GNU Arm Embedded Toolchain 10.3-2021.10) 2.36.1.20210621]
+        ignore line: [COMPILER_PATH=/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v7e-m+dp/hard/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_e06e0.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp']
+        ignore line: [Linking C static library libcmTC_e06e0.a]
+        ignore line: [/usr/bin/cmake -P CMakeFiles/cmTC_e06e0.dir/cmake_clean_target.cmake]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e06e0.dir/link.txt --verbose=1]
+        ignore line: [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ar qc libcmTC_e06e0.a CMakeFiles/cmTC_e06e0.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ranlib libcmTC_e06e0.a]
+        ignore line: [gmake[1]: Leaving directory '/home/ktkuri/Code/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-XgxYcp']
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:31 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/ktkuri/Code/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-KknEqr"
+      binary: "/home/ktkuri/Code/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-KknEqr"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics"
+      CMAKE_CXX_FLAGS_DEBUG: "-O0 -g3"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ktkuri/Code/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-KknEqr'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_219ca/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_219ca.dir/build.make CMakeFiles/cmTC_219ca.dir/build
+        gmake[1]: Entering directory '/home/ktkuri/Code/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-KknEqr'
+        Building CXX object CMakeFiles/cmTC_219ca.dir/CMakeCXXCompilerABI.cpp.obj
+        /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_219ca.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++
+        Target: arm-none-eabi
+        Configured with: /mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/src/gcc/configure --target=arm-none-eabi --prefix=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native --libexecdir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/lib --infodir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/info --mandir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/man --htmldir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/html --pdfdir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/pdf --enable-languages=c,c++ --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-arm-none-eabi --with-sysroot=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/arm-none-eabi --build=x86_64-linux-gnu --host=x86_64-linux-gnu --with-gmp=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-mpfr=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-mpc=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-isl=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-libelf=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-pkgversion='GNU Arm Embedded Toolchain 10.3-2021.10' --with-multilib-list=rmprofile,aprofile
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) 
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_219ca.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp'
+         /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1plus -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/ -isysroot /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mfpu=fpv5-d16 -mfloat-abi=hard -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -auxbase-strip CMakeFiles/cmTC_219ca.dir/CMakeCXXCompilerABI.cpp.obj -Wall -Wextra -Wpedantic -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o /tmp/ccEpVA5f.s
+        GNU C++14 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)
+        	compiled by GNU C version 4.8.4, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"
+        ignoring duplicate directory "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7e-m+dp/hard"
+        ignoring duplicate directory "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"
+        ignoring duplicate directory "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/include"
+        ignoring nonexistent directory "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/usr/local/include"
+        ignoring duplicate directory "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/include-fixed"
+        ignoring duplicate directory "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"
+        ignoring nonexistent directory "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1
+         /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7e-m+dp/hard
+         /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward
+         /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include
+         /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include-fixed
+         /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include
+        End of search list.
+        GNU C++14 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)
+        	compiled by GNU C version 4.8.4, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 62a2c0a0f0d30bb0bbe5c686601adbb0
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_219ca.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp'
+         /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as -v -march=armv7e-m -mfloat-abi=hard -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_219ca.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccEpVA5f.s
+        GNU assembler version 2.36.1 (arm-none-eabi) using BFD version (GNU Arm Embedded Toolchain 10.3-2021.10) 2.36.1.20210621
+        COMPILER_PATH=/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/thumb/v7e-m+dp/hard/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/:/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_219ca.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp'
+        Linking CXX static library libcmTC_219ca.a
+        /usr/bin/cmake -P CMakeFiles/cmTC_219ca.dir/cmake_clean_target.cmake
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_219ca.dir/link.txt --verbose=1
+        /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ar qc libcmTC_219ca.a CMakeFiles/cmTC_219ca.dir/CMakeCXXCompilerABI.cpp.obj
+        /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ranlib libcmTC_219ca.a
+        gmake[1]: Leaving directory '/home/ktkuri/Code/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-KknEqr'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1]
+          add: [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7e-m+dp/hard]
+          add: [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward]
+          add: [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include]
+          add: [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include-fixed]
+          add: [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include]
+        end of search list found
+        collapse include dir [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1] ==> [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1]
+        collapse include dir [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7e-m+dp/hard] ==> [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7e-m+dp/hard]
+        collapse include dir [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward] ==> [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/backward]
+        collapse include dir [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include] ==> [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include]
+        collapse include dir [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/include-fixed] ==> [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed]
+        collapse include dir [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include] ==> [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include]
+        implicit include dirs: [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1;/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7e-m+dp/hard;/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/backward;/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include;/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed;/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(arm-none-eabi-g\\+\\+|;ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(arm-none-eabi-g\\+\\+|;ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/ktkuri/Code/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-KknEqr']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_219ca/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_219ca.dir/build.make CMakeFiles/cmTC_219ca.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/ktkuri/Code/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-KknEqr']
+        ignore line: [Building CXX object CMakeFiles/cmTC_219ca.dir/CMakeCXXCompilerABI.cpp.obj]
+        link line: [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_219ca.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+          arg [/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++] ==> ignore
+          arg [-mcpu=cortex-m7] ==> ignore
+          arg [-mfpu=fpv5-d16] ==> ignore
+          arg [-mfloat-abi=hard] ==> ignore
+          arg [-Wall] ==> ignore
+          arg [-Wextra] ==> ignore
+          arg [-Wpedantic] ==> ignore
+          arg [-fdata-sections] ==> ignore
+          arg [-ffunction-sections] ==> ignore
+          arg [-mcpu=cortex-m7] ==> ignore
+          arg [-mfpu=fpv5-d16] ==> ignore
+          arg [-mfloat-abi=hard] ==> ignore
+          arg [-Wall] ==> ignore
+          arg [-Wextra] ==> ignore
+          arg [-Wpedantic] ==> ignore
+          arg [-fdata-sections] ==> ignore
+          arg [-ffunction-sections] ==> ignore
+          arg [-mcpu=cortex-m7] ==> ignore
+          arg [-mfpu=fpv5-d16] ==> ignore
+          arg [-mfloat-abi=hard] ==> ignore
+          arg [-Wall] ==> ignore
+          arg [-Wextra] ==> ignore
+          arg [-Wpedantic] ==> ignore
+          arg [-fdata-sections] ==> ignore
+          arg [-ffunction-sections] ==> ignore
+          arg [-fno-rtti] ==> ignore
+          arg [-fno-exceptions] ==> ignore
+          arg [-fno-threadsafe-statics] ==> ignore
+          arg [-v] ==> ignore
+          arg [-o] ==> ignore
+          arg [CMakeFiles/cmTC_219ca.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [-c] ==> ignore
+          arg [/usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp] ==> ignore
+        linker tool for 'CXX': /home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Running the CXX compiler's linker: "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++" "-v"
+      Using built-in specs.
+      COLLECT_GCC=/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++
+      COLLECT_LTO_WRAPPER=/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/lto-wrapper
+      Target: arm-none-eabi
+      Configured with: /mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/src/gcc/configure --target=arm-none-eabi --prefix=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native --libexecdir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/lib --infodir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/info --mandir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/man --htmldir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/html --pdfdir=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/share/doc/gcc-arm-none-eabi/pdf --enable-languages=c,c++ --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-arm-none-eabi --with-sysroot=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/install-native/arm-none-eabi --build=x86_64-linux-gnu --host=x86_64-linux-gnu --with-gmp=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-mpfr=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-mpc=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-isl=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-libelf=/mnt/workspace/workspace/GCC-10-pipeline/jenkins-GCC-10-pipeline-338_20211018_1634516203/build-native/host-libs/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-pkgversion='GNU Arm Embedded Toolchain 10.3-2021.10' --with-multilib-list=rmprofile,aprofile
+      Thread model: single
+      Supported LTO compression algorithms: zlib
+      gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10)
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Running the CXX compiler's linker: "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++" "-V"
+      arm-none-eabi-g++: error: unrecognized command-line option '-V'
+      arm-none-eabi-g++: fatal error: no input files
+      compilation terminated.
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Running the CXX compiler's linker: "/home/ktkuri/Documents/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++" "--version"
+      arm-none-eabi-g++ (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 20210824 (release)
+      Copyright (C) 2020 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:1237 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:135 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:35 (enable_language)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 20210824 (release)
+      Copyright (C) 2020 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
 ...

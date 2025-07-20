@@ -29,7 +29,7 @@
                 "--config",
                 "Debug",
                 "-j",
-                "4"
+                "16"
             ],
             "group": {
                 "kind": "build",
@@ -94,17 +94,17 @@
                 "-c",
                 "program build/Debug/LCD_H7.elf verify reset exit"
             ],
-            "group": "build",
-            "presentation": {
-                "echo": true,
-                "reveal": "always",
-                "focus": true,
-                "panel": "shared",
-                "showReuseMessage": true,
-                "clear": false
-            },
-            "dependsOn": "CMake: Build Debug",
-            "problemMatcher": ["$gcc"]
+            // "group": "build",
+            // "presentation": {
+            //     "echo": true,
+            //     "reveal": "always",
+            //     "focus": true,
+            //     "panel": "shared",
+            //     "showReuseMessage": true,
+            //     "clear": false
+            // },
+            // "dependsOn": "CMake: Build Debug",
+            // "problemMatcher": ["$gcc"]
         },
         {
             "label": "OpenOCD: Erase Flash",

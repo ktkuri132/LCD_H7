@@ -5,18 +5,18 @@ events:
     kind: "message-v1"
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:207 (message)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     message: |
       The target system is: Generic -  - arm
       The host system is: Windows - 10.0.19045 - AMD64
   -
     kind: "find-v1"
     backtrace:
-      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeMinGWFindMake.cmake:5 (find_program)"
-      - "CMakeLists.txt:31 (project)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeNinjaFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:29 (project)"
     mode: "program"
     variable: "CMAKE_MAKE_PROGRAM"
-    description: "Path to a program."
+    description: "Program used to build from build.ninja files."
     settings:
       SearchFramework: "NEVER"
       SearchAppBundle: "NEVER"
@@ -26,7 +26,9 @@ events:
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "mingw32-make.exe"
+      - "ninja-build"
+      - "ninja"
+      - "samu"
     candidate_directories:
       - "C:/Windows/System32/"
       - "C:/Windows/"
@@ -41,25 +43,66 @@ events:
       - "C:/Users/ktkuri/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/ktkuri/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Program Files/JetBrains/CLion 2025.1.3/bin/"
-      - "/REGISTRY-NOTFOUND/bin/"
-      - "c:/MinGW/bin/"
-      - "/MinGW/bin/"
-      - "/REGISTRY-NOTFOUND/MinGW/bin/"
     searched_directories:
-      - "C:/Windows/System32/mingw32-make.exe.com"
-      - "C:/Windows/System32/mingw32-make.exe"
-      - "C:/Windows/mingw32-make.exe.com"
-      - "C:/Windows/mingw32-make.exe"
-      - "C:/Windows/System32/wbem/mingw32-make.exe.com"
-      - "C:/Windows/System32/wbem/mingw32-make.exe"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/mingw32-make.exe.com"
-      - "C:/Windows/System32/WindowsPowerShell/v1.0/mingw32-make.exe"
-      - "C:/Windows/System32/OpenSSH/mingw32-make.exe.com"
-      - "C:/Windows/System32/OpenSSH/mingw32-make.exe"
-      - "C:/Program Files/CMake/bin/mingw32-make.exe.com"
-      - "C:/Program Files/CMake/bin/mingw32-make.exe"
-      - "C:/MinGW/bin/mingw32-make.exe.com"
-    found: "C:/MinGW/bin/mingw32-make.exe"
+      - "C:/Windows/System32/ninja-build.com"
+      - "C:/Windows/System32/ninja-build.exe"
+      - "C:/Windows/System32/ninja-build"
+      - "C:/Windows/System32/ninja.com"
+      - "C:/Windows/System32/ninja.exe"
+      - "C:/Windows/System32/ninja"
+      - "C:/Windows/System32/samu.com"
+      - "C:/Windows/System32/samu.exe"
+      - "C:/Windows/System32/samu"
+      - "C:/Windows/ninja-build.com"
+      - "C:/Windows/ninja-build.exe"
+      - "C:/Windows/ninja-build"
+      - "C:/Windows/ninja.com"
+      - "C:/Windows/ninja.exe"
+      - "C:/Windows/ninja"
+      - "C:/Windows/samu.com"
+      - "C:/Windows/samu.exe"
+      - "C:/Windows/samu"
+      - "C:/Windows/System32/wbem/ninja-build.com"
+      - "C:/Windows/System32/wbem/ninja-build.exe"
+      - "C:/Windows/System32/wbem/ninja-build"
+      - "C:/Windows/System32/wbem/ninja.com"
+      - "C:/Windows/System32/wbem/ninja.exe"
+      - "C:/Windows/System32/wbem/ninja"
+      - "C:/Windows/System32/wbem/samu.com"
+      - "C:/Windows/System32/wbem/samu.exe"
+      - "C:/Windows/System32/wbem/samu"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ninja-build.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ninja-build.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ninja-build"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ninja.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ninja.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ninja"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/samu.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/samu.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/samu"
+      - "C:/Windows/System32/OpenSSH/ninja-build.com"
+      - "C:/Windows/System32/OpenSSH/ninja-build.exe"
+      - "C:/Windows/System32/OpenSSH/ninja-build"
+      - "C:/Windows/System32/OpenSSH/ninja.com"
+      - "C:/Windows/System32/OpenSSH/ninja.exe"
+      - "C:/Windows/System32/OpenSSH/ninja"
+      - "C:/Windows/System32/OpenSSH/samu.com"
+      - "C:/Windows/System32/OpenSSH/samu.exe"
+      - "C:/Windows/System32/OpenSSH/samu"
+      - "C:/Program Files/CMake/bin/ninja-build.com"
+      - "C:/Program Files/CMake/bin/ninja-build.exe"
+      - "C:/Program Files/CMake/bin/ninja-build"
+      - "C:/Program Files/CMake/bin/ninja.com"
+      - "C:/Program Files/CMake/bin/ninja.exe"
+      - "C:/Program Files/CMake/bin/ninja"
+      - "C:/Program Files/CMake/bin/samu.com"
+      - "C:/Program Files/CMake/bin/samu.exe"
+      - "C:/Program Files/CMake/bin/samu"
+      - "C:/MinGW/bin/ninja-build.com"
+      - "C:/MinGW/bin/ninja-build.exe"
+      - "C:/MinGW/bin/ninja-build"
+      - "C:/MinGW/bin/ninja.com"
+    found: "C:/MinGW/bin/ninja.exe"
     search_context:
       ENV{PATH}:
         - "C:\\Windows\\system32"
@@ -81,7 +124,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompiler.cmake:115 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:67 (_cmake_find_compiler_path)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_WITH_PATH"
     description: "Path to a program."
@@ -160,7 +203,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -199,11 +242,11 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
       Compiler: C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc.exe 
-      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections
       Id flags:  
       
       The output was:
@@ -221,7 +264,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -260,11 +303,11 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
       Compiler: C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc.exe 
-      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections
       Id flags: -c 
       
       The output was:
@@ -282,7 +325,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:58 (__resolve_tool_path)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     mode: "program"
     variable: "_CMAKE_TOOL_WITH_PATH"
     description: "Path to a program."
@@ -334,7 +377,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     mode: "program"
     variable: "CMAKE_AR"
     description: "Path to a program."
@@ -387,7 +430,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     mode: "program"
     variable: "CMAKE_RANLIB"
     description: "Path to a program."
@@ -440,7 +483,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     mode: "program"
     variable: "CMAKE_STRIP"
     description: "Path to a program."
@@ -493,7 +536,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     mode: "program"
     variable: "CMAKE_NM"
     description: "Path to a program."
@@ -546,7 +589,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     mode: "program"
     variable: "CMAKE_OBJDUMP"
     description: "Path to a program."
@@ -599,7 +642,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     mode: "program"
     variable: "CMAKE_READELF"
     description: "Path to a program."
@@ -652,7 +695,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     mode: "program"
     variable: "CMAKE_DLLTOOL"
     description: "Path to a program."
@@ -765,7 +808,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     mode: "program"
     variable: "CMAKE_ADDR2LINE"
     description: "Path to a program."
@@ -818,7 +861,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     mode: "program"
     variable: "CMAKE_TAPI"
     description: "Path to a program."
@@ -948,7 +991,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -1120,7 +1163,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -1292,7 +1335,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompiler.cmake:115 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:71 (_cmake_find_compiler_path)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_WITH_PATH"
     description: "Path to a program."
@@ -1371,7 +1414,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -1410,11 +1453,11 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
       Compiler: C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-g++.exe 
-      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics
       Id flags:  
       
       The output was:
@@ -1432,7 +1475,7 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -1471,11 +1514,11 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler: C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-g++.exe 
-      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-Wextra;-Wpedantic;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics
       Id flags: -c 
       
       The output was:
@@ -1492,7 +1535,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -1664,7 +1707,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -1836,27 +1879,24 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-5t12av"
-      binary: "C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-5t12av"
+      source: "C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-y1gtw9"
+      binary: "C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-y1gtw9"
     cmakeVariables:
-      CMAKE_C_FLAGS: " -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections"
+      CMAKE_C_FLAGS: " -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections"
       CMAKE_C_FLAGS_DEBUG: "-O0 -g3"
       CMAKE_EXE_LINKER_FLAGS: ""
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-5t12av'
+        Change Dir: 'C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-y1gtw9'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_a67de/fast
-        C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_a67de.dir\\build.make CMakeFiles/cmTC_a67de.dir/build
-        mingw32-make.exe[1]: Entering directory `C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-5t12av'
-        Building C object CMakeFiles/cmTC_a67de.dir/CMakeCCompilerABI.c.obj
-        C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections  -std=gnu11   -v -o CMakeFiles\\cmTC_a67de.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
+        Run Build Command(s): C:/MinGW/bin/ninja.exe -v cmTC_4a743
+        [1/2] C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections  -std=gnu11   -v -o CMakeFiles/cmTC_4a743.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c"
         Using built-in specs.
         COLLECT_GCC=C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE
         Target: arm-none-eabi
@@ -1864,8 +1904,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) 
-        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles\\cmTC_a67de.dir\\CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp'
-         c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1.exe -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../lib/gcc/arm-none-eabi/10.3.1/ -isysroot c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mfpu=fpv5-d16 -mfloat-abi=hard -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -auxbase-strip CMakeFiles\\cmTC_a67de.dir\\CMakeCCompilerABI.c.obj -Wall -Wextra -Wpedantic -std=gnu11 -version -fdata-sections -ffunction-sections -o C:\\Users\\ktkuri\\AppData\\Local\\Temp\\ccrkGT8e.s
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_4a743.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp'
+         c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1.exe -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../lib/gcc/arm-none-eabi/10.3.1/ -isysroot c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -auxbase-strip CMakeFiles/cmTC_4a743.dir/CMakeCCompilerABI.c.obj -Wall -Wextra -Wpedantic -std=gnu11 -version -fdata-sections -ffunction-sections -o C:\\Users\\ktkuri\\AppData\\Local\\Temp\\ccOZovX7.s
         GNU C11 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)
         	compiled by GNU C version 7.3-win32 20180312, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
         
@@ -1886,18 +1926,13 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: f3937ce18b4177bfd408ca565336596a
-        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles\\cmTC_a67de.dir\\CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp'
-         c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m -mfloat-abi=hard -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles\\cmTC_a67de.dir\\CMakeCCompilerABI.c.obj C:\\Users\\ktkuri\\AppData\\Local\\Temp\\ccrkGT8e.s
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_4a743.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp'
+         c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_4a743.dir/CMakeCCompilerABI.c.obj C:\\Users\\ktkuri\\AppData\\Local\\Temp\\ccOZovX7.s
         GNU assembler version 2.36.1 (arm-none-eabi) using BFD version (GNU Arm Embedded Toolchain 10.3-2021.10) 2.36.1.20210621
         COMPILER_PATH=c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/;c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/;c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard/;c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/;c:/progra~2/gnuarm~1/102021~1.10/bin/../arm-none-eabi/lib/thumb/v7e-m+dp/hard/;c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/;c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/;c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/;c:/progra~2/gnuarm~1/102021~1.10/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles\\cmTC_a67de.dir\\CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp'
-        Linking C static library libcmTC_a67de.a
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -P CMakeFiles\\cmTC_a67de.dir\\cmake_clean_target.cmake
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_a67de.dir\\link.txt --verbose=1
-        C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\ARM-NO~2.EXE qc libcmTC_a67de.a CMakeFiles/cmTC_a67de.dir/CMakeCCompilerABI.c.obj
-        C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR17F9~1.EXE libcmTC_a67de.a
-        mingw32-make.exe[1]: Leaving directory `C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-5t12av'
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_4a743.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp'
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_4a743.a && C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\ARM-NO~2.EXE qc libcmTC_4a743.a  CMakeFiles/cmTC_4a743.dir/CMakeCCompilerABI.c.obj && C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR17F9~1.EXE libcmTC_4a743.a && cd ."
         
       exitCode: 0
   -
@@ -1905,7 +1940,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     message: |
       Parsed C implicit include dir info: rv=done
         found start of include info
@@ -1925,18 +1960,15 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(arm-none-eabi-g\\+\\+\\.exe|;ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(arm-none-eabi-g\\+\\+\\.exe|;ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-5t12av']
+        ignore line: [Change Dir: 'C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-y1gtw9']
         ignore line: []
-        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_a67de/fast]
-        ignore line: [C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_a67de.dir\\build.make CMakeFiles/cmTC_a67de.dir/build]
-        ignore line: [mingw32-make.exe[1]: Entering directory `C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-5t12av']
-        ignore line: [Building C object CMakeFiles/cmTC_a67de.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections  -std=gnu11   -v -o CMakeFiles\\cmTC_a67de.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s): C:/MinGW/bin/ninja.exe -v cmTC_4a743]
+        ignore line: [[1/2] C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections  -std=gnu11   -v -o CMakeFiles/cmTC_4a743.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE]
         ignore line: [Target: arm-none-eabi]
@@ -1944,8 +1976,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles\\cmTC_a67de.dir\\CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp']
-        ignore line: [ c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1.exe -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../lib/gcc/arm-none-eabi/10.3.1/ -isysroot c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mfpu=fpv5-d16 -mfloat-abi=hard -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -auxbase-strip CMakeFiles\\cmTC_a67de.dir\\CMakeCCompilerABI.c.obj -Wall -Wextra -Wpedantic -std=gnu11 -version -fdata-sections -ffunction-sections -o C:\\Users\\ktkuri\\AppData\\Local\\Temp\\ccrkGT8e.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_4a743.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp']
+        ignore line: [ c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1.exe -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../lib/gcc/arm-none-eabi/10.3.1/ -isysroot c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -auxbase-strip CMakeFiles/cmTC_4a743.dir/CMakeCCompilerABI.c.obj -Wall -Wextra -Wpedantic -std=gnu11 -version -fdata-sections -ffunction-sections -o C:\\Users\\ktkuri\\AppData\\Local\\Temp\\ccOZovX7.s]
         ignore line: [GNU C11 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 7.3-win32 20180312  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
         ignore line: []
@@ -1966,8 +1998,8 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: f3937ce18b4177bfd408ca565336596a]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles\\cmTC_a67de.dir\\CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp']
-        ignore line: [ c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m -mfloat-abi=hard -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles\\cmTC_a67de.dir\\CMakeCCompilerABI.c.obj C:\\Users\\ktkuri\\AppData\\Local\\Temp\\ccrkGT8e.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_4a743.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp']
+        ignore line: [ c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_4a743.dir/CMakeCCompilerABI.c.obj C:\\Users\\ktkuri\\AppData\\Local\\Temp\\ccOZovX7.s]
         ignore line: [GNU assembler version 2.36.1 (arm-none-eabi) using BFD version (GNU Arm Embedded Toolchain 10.3-2021.10) 2.36.1.20210621]
         ignore line: [COMPILER_PATH=c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/]
         ignore line: [c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/]
@@ -1979,13 +2011,8 @@ events:
         ignore line: [c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/]
         ignore line: [c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/]
         ignore line: [c:/progra~2/gnuarm~1/102021~1.10/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles\\cmTC_a67de.dir\\CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp']
-        ignore line: [Linking C static library libcmTC_a67de.a]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -P CMakeFiles\\cmTC_a67de.dir\\cmake_clean_target.cmake]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_a67de.dir\\link.txt --verbose=1]
-        ignore line: [C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\ARM-NO~2.EXE qc libcmTC_a67de.a CMakeFiles/cmTC_a67de.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR17F9~1.EXE libcmTC_a67de.a]
-        ignore line: [mingw32-make.exe[1]: Leaving directory `C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-5t12av']
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_4a743.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp']
+        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_4a743.a && C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\ARM-NO~2.EXE qc libcmTC_4a743.a  CMakeFiles/cmTC_4a743.dir/CMakeCCompilerABI.c.obj && C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR17F9~1.EXE libcmTC_4a743.a && cd ."]
         ignore line: []
         ignore line: []
         implicit libs: []
@@ -1999,14 +2026,14 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-yam0st"
-      binary: "C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-yam0st"
+      source: "C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-bxdyoc"
+      binary: "C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-bxdyoc"
     cmakeVariables:
-      CMAKE_CXX_FLAGS: " -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics"
+      CMAKE_CXX_FLAGS: " -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics"
       CMAKE_CXX_FLAGS_DEBUG: "-O0 -g3"
       CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -2014,13 +2041,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-yam0st'
+        Change Dir: 'C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-bxdyoc'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_dcfac/fast
-        C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_dcfac.dir\\build.make CMakeFiles/cmTC_dcfac.dir/build
-        mingw32-make.exe[1]: Entering directory `C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-yam0st'
-        Building CXX object CMakeFiles/cmTC_dcfac.dir/CMakeCXXCompilerABI.cpp.obj
-        C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR10B2~1.EXE   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles\\cmTC_dcfac.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+        Run Build Command(s): C:/MinGW/bin/ninja.exe -v cmTC_1e273
+        [1/2] C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR10B2~1.EXE   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_1e273.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp"
         Using built-in specs.
         COLLECT_GCC=C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR10B2~1.EXE
         Target: arm-none-eabi
@@ -2028,8 +2052,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) 
-        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles\\cmTC_dcfac.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp'
-         c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1plus.exe -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../lib/gcc/arm-none-eabi/10.3.1/ -isysroot c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mfpu=fpv5-d16 -mfloat-abi=hard -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -auxbase-strip CMakeFiles\\cmTC_dcfac.dir\\CMakeCXXCompilerABI.cpp.obj -Wall -Wextra -Wpedantic -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o C:\\Users\\ktkuri\\AppData\\Local\\Temp\\ccQu8u7L.s
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_1e273.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp'
+         c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1plus.exe -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../lib/gcc/arm-none-eabi/10.3.1/ -isysroot c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -auxbase-strip CMakeFiles/cmTC_1e273.dir/CMakeCXXCompilerABI.cpp.obj -Wall -Wextra -Wpedantic -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o C:\\Users\\ktkuri\\AppData\\Local\\Temp\\cc9VHK8k.s
         GNU C++14 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)
         	compiled by GNU C version 7.3-win32 20180312, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
         
@@ -2056,18 +2080,13 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: f8787892a7c5aa84cea58dce52be7118
-        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles\\cmTC_dcfac.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp'
-         c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m -mfloat-abi=hard -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles\\cmTC_dcfac.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\ktkuri\\AppData\\Local\\Temp\\ccQu8u7L.s
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_1e273.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp'
+         c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_1e273.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ktkuri\\AppData\\Local\\Temp\\cc9VHK8k.s
         GNU assembler version 2.36.1 (arm-none-eabi) using BFD version (GNU Arm Embedded Toolchain 10.3-2021.10) 2.36.1.20210621
         COMPILER_PATH=c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/;c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/;c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+dp/hard/;c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/;c:/progra~2/gnuarm~1/102021~1.10/bin/../arm-none-eabi/lib/thumb/v7e-m+dp/hard/;c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/;c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/;c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/;c:/progra~2/gnuarm~1/102021~1.10/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles\\cmTC_dcfac.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp'
-        Linking CXX static library libcmTC_dcfac.a
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -P CMakeFiles\\cmTC_dcfac.dir\\cmake_clean_target.cmake
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_dcfac.dir\\link.txt --verbose=1
-        C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\ARM-NO~2.EXE qc libcmTC_dcfac.a CMakeFiles/cmTC_dcfac.dir/CMakeCXXCompilerABI.cpp.obj
-        C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR17F9~1.EXE libcmTC_dcfac.a
-        mingw32-make.exe[1]: Leaving directory `C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-yam0st'
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_1e273.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp'
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_1e273.a && C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\ARM-NO~2.EXE qc libcmTC_1e273.a  CMakeFiles/cmTC_1e273.dir/CMakeCXXCompilerABI.cpp.obj && C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR17F9~1.EXE libcmTC_1e273.a && cd ."
         
       exitCode: 0
   -
@@ -2075,7 +2094,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     message: |
       Parsed CXX implicit include dir info: rv=done
         found start of include info
@@ -2101,18 +2120,15 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:31 (project)"
+      - "CMakeLists.txt:29 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(arm-none-eabi-g\\+\\+\\.exe|;ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(arm-none-eabi-g\\+\\+\\.exe|;ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-yam0st']
+        ignore line: [Change Dir: 'C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-bxdyoc']
         ignore line: []
-        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_dcfac/fast]
-        ignore line: [C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_dcfac.dir\\build.make CMakeFiles/cmTC_dcfac.dir/build]
-        ignore line: [mingw32-make.exe[1]: Entering directory `C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-yam0st']
-        ignore line: [Building CXX object CMakeFiles/cmTC_dcfac.dir/CMakeCXXCompilerABI.cpp.obj]
-        ignore line: [C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR10B2~1.EXE   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles\\cmTC_dcfac.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"]
+        ignore line: [Run Build Command(s): C:/MinGW/bin/ninja.exe -v cmTC_1e273]
+        ignore line: [[1/2] C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR10B2~1.EXE   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_1e273.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR10B2~1.EXE]
         ignore line: [Target: arm-none-eabi]
@@ -2120,8 +2136,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 10.3.1 20210824 (release) (GNU Arm Embedded Toolchain 10.3-2021.10) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles\\cmTC_dcfac.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp']
-        ignore line: [ c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1plus.exe -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../lib/gcc/arm-none-eabi/10.3.1/ -isysroot c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mfpu=fpv5-d16 -mfloat-abi=hard -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -auxbase-strip CMakeFiles\\cmTC_dcfac.dir\\CMakeCXXCompilerABI.cpp.obj -Wall -Wextra -Wpedantic -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o C:\\Users\\ktkuri\\AppData\\Local\\Temp\\ccQu8u7L.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_1e273.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp']
+        ignore line: [ c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/cc1plus.exe -quiet -v -imultilib thumb/v7e-m+dp/hard -iprefix c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../lib/gcc/arm-none-eabi/10.3.1/ -isysroot c:\\progra~2\\gnuarm~1\\102021~1.10\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -auxbase-strip CMakeFiles/cmTC_1e273.dir/CMakeCXXCompilerABI.cpp.obj -Wall -Wextra -Wpedantic -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o C:\\Users\\ktkuri\\AppData\\Local\\Temp\\cc9VHK8k.s]
         ignore line: [GNU C++14 (GNU Arm Embedded Toolchain 10.3-2021.10) version 10.3.1 20210824 (release) (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 7.3-win32 20180312  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
         ignore line: []
@@ -2148,8 +2164,8 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: f8787892a7c5aa84cea58dce52be7118]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles\\cmTC_dcfac.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp']
-        ignore line: [ c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m -mfloat-abi=hard -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles\\cmTC_dcfac.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\ktkuri\\AppData\\Local\\Temp\\ccQu8u7L.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_1e273.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp']
+        ignore line: [ c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_1e273.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ktkuri\\AppData\\Local\\Temp\\cc9VHK8k.s]
         ignore line: [GNU assembler version 2.36.1 (arm-none-eabi) using BFD version (GNU Arm Embedded Toolchain 10.3-2021.10) 2.36.1.20210621]
         ignore line: [COMPILER_PATH=c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/]
         ignore line: [c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/]
@@ -2161,13 +2177,8 @@ events:
         ignore line: [c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/]
         ignore line: [c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/]
         ignore line: [c:/progra~2/gnuarm~1/102021~1.10/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles\\cmTC_dcfac.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp']
-        ignore line: [Linking CXX static library libcmTC_dcfac.a]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -P CMakeFiles\\cmTC_dcfac.dir\\cmake_clean_target.cmake]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_dcfac.dir\\link.txt --verbose=1]
-        ignore line: [C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\ARM-NO~2.EXE qc libcmTC_dcfac.a CMakeFiles/cmTC_dcfac.dir/CMakeCXXCompilerABI.cpp.obj]
-        ignore line: [C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR17F9~1.EXE libcmTC_dcfac.a]
-        ignore line: [mingw32-make.exe[1]: Leaving directory `C:/Users/ktkuri/Desktop/LCD_H7/build/Debug/CMakeFiles/CMakeScratch/TryCompile-yam0st']
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-Wextra' '-Wpedantic' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_1e273.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp']
+        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_1e273.a && C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\ARM-NO~2.EXE qc libcmTC_1e273.a  CMakeFiles/cmTC_1e273.dir/CMakeCXXCompilerABI.cpp.obj && C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR17F9~1.EXE libcmTC_1e273.a && cd ."]
         ignore line: []
         ignore line: []
         implicit libs: []
@@ -2181,7 +2192,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompiler.cmake:115 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineASMCompiler.cmake:64 (_cmake_find_compiler_path)"
-      - "CMakeLists.txt:35 (enable_language)"
+      - "CMakeLists.txt:33 (enable_language)"
     mode: "program"
     variable: "CMAKE_ASM_COMPILER_WITH_PATH"
     description: "Path to a program."
@@ -2261,7 +2272,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:1290 (message)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineASMCompiler.cmake:170 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
-      - "CMakeLists.txt:35 (enable_language)"
+      - "CMakeLists.txt:33 (enable_language)"
     message: |
       Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
       arm-none-eabi-gcc.exe (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 20210824 (release)
@@ -2274,7 +2285,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
-      - "CMakeLists.txt:35 (enable_language)"
+      - "CMakeLists.txt:33 (enable_language)"
     mode: "program"
     variable: "CMAKE_ASM_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -2417,7 +2428,7 @@ events:
     backtrace:
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
-      - "CMakeLists.txt:35 (enable_language)"
+      - "CMakeLists.txt:33 (enable_language)"
     mode: "program"
     variable: "CMAKE_ASM_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"

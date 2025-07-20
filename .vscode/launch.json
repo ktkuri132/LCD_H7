@@ -1,0 +1,56 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug STM32H7 (OpenOCD)",
+            "cwd": "${workspaceFolder}",
+            "executable": "./build/Debug/LCD_H7.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "openocd",
+            "configFiles": [
+                "interface/cmsis-dap.cfg",
+                "target/stm32h7x.cfg"
+            ],
+            "searchDir": [],
+            "openOCDLaunchCommands": [
+                "monitor arm semihosting enable"
+            ],
+            "postLaunchCommands": [
+                "monitor reset halt",
+                "load",
+                "continue"
+            ],
+            "showDevDebugOutput": "parsed",
+            "svdFile": "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32H7xx/Debug/STM32H723xx.svd",
+            "liveWatch": {
+                "enabled": true,
+                "samplesPerSecond": 4
+            },
+            "preLaunchTask": "CMake: Build Debug"
+        },
+        {
+            "name": "Attach to STM32H7 (OpenOCD)",
+            "cwd": "${workspaceFolder}",
+            "executable": "./build/Debug/LCD_H7.elf",
+            "request": "attach",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "configFiles": [
+                "interface/cmsis-dap.cfg",
+                "target/stm32h7x.cfg"
+            ],
+            "searchDir": [],
+            "openOCDLaunchCommands": [
+                "monitor arm semihosting enable"
+            ],
+            "showDevDebugOutput": "parsed",
+            "svdFile": "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32H7xx/Debug/STM32H723xx.svd",
+            "liveWatch": {
+                "enabled": true,
+                "samplesPerSecond": 4
+            }
+        }
+    ]
+}

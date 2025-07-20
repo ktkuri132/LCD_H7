@@ -1,0 +1,39 @@
+{
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "C_Cpp.default.intelliSenseMode": "gcc-arm",
+    "C_Cpp.default.compilerPath": "${env:ARM_TOOLCHAIN_PATH}/arm-none-eabi-gcc.exe",
+    "C_Cpp.default.cStandard": "c11",
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.defines": [
+        "STM32H723xx",
+        "USE_HAL_DRIVER"
+    ],
+    "cortex-debug.openocdPath": "${env:OPENOCD_PATH}/bin/openocd.exe",
+    "cortex-debug.armToolchainPath": "${env:ARM_TOOLCHAIN_PATH}/bin",
+    "cortex-debug.gdbPath": "${env:ARM_TOOLCHAIN_PATH}/bin/arm-none-eabi-gdb.exe",
+    "files.associations": {
+        "*.h": "c",
+        "*.c": "c",
+        "*.inc": "c"
+    },
+    "files.exclude": {
+        "build/": true,
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
+    },
+    "search.exclude": {
+        "build/": true,
+        "Drivers/CMSIS/": true,
+        "Drivers/STM32H7xx_HAL_Driver/": true
+    },
+    "cmake.configureOnOpen": true,
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.generator": "Ninja",
+    "terminal.integrated.env.windows": {
+        "PATH": "${env:ARM_TOOLCHAIN_PATH}/bin;${env:OPENOCD_PATH}/bin;${env:CMAKE_PATH}/bin;${env:NINJA_PATH};${env:PATH}"
+    }
+}

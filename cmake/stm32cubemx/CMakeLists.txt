@@ -24,7 +24,7 @@ set(MX_Application_Src
     ${CMAKE_SOURCE_DIR}/Src/gpio.c
     ${CMAKE_SOURCE_DIR}/Src/memorymap.c
     ${CMAKE_SOURCE_DIR}/Src/spi.c
-    ${CMAKE_SOURCE_DIR}/Src/usart.c
+    # ${CMAKE_SOURCE_DIR}/Src/usart.c
     ${CMAKE_SOURCE_DIR}/Src/stm32h7xx_it.c
     ${CMAKE_SOURCE_DIR}/Src/stm32h7xx_hal_msp.c
     ${CMAKE_SOURCE_DIR}/Src/sysmem.c
